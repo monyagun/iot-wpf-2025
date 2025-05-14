@@ -17,9 +17,9 @@ namespace WpfBookRentalShop01.Helpers
         public static readonly Logger LOGGER = LogManager.GetCurrentClassLogger();
 
         // DB연결문자열을 한군데 저장
-        public static readonly string CONSTR = "Server=localhost;Database=bookrentalshop;Uid=root;Pwd=12345;Charset=utf8;";
+        public static readonly string CONNSTR = "Server=localhost;Database=bookrentalshop;Uid=root;Pwd=12345;Charset=utf8;";
 
-        // MahApps.Metrd 다이얼로그 코디네이터
-        public static IDialogCoordinator DIALOGCOORDINATIOR;
+        // MahApps.Metro 다이얼로그 코디네이터
+        public static IDialogCoordinator DIALOGCOORDINATOR;
     }
 }

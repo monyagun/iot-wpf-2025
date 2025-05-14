@@ -1,9 +1,4 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WpfBookRentalShop01.ViewModels
 {
@@ -21,6 +16,5 @@ namespace WpfBookRentalShop01.ViewModels
         {
             Message = "책관리 화면입니다";
         }
-
     }
 }
