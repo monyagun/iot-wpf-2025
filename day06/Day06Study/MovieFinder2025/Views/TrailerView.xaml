@@ -11,7 +11,8 @@
     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
     mc:Ignorable="d"
-    Title="Youtube Trailer" Height="560" Width="800">
+    ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+    Title="Youtube Trailer" Height="560" Width="900">
     <mah:MetroWindow.IconTemplate>
         <DataTemplate>
             <iconPacks:PackIconSimpleIcons Kind="Youtube" Margin="10,7,0,0" Foreground="White" />
@@ -19,16 +20,18 @@
     </mah:MetroWindow.IconTemplate>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="510"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="510" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
         <!-- UI컨트롤 구성 -->
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" Margin="5" Content="{Binding MovieTitle}" />
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+               FontSize="20" FontWeight="Bold" Margin="5" 
+               Content="{Binding MovieTitle}" />
 
         <ListView Grid.Row="1" Grid.Column="0" Margin="5"
                   ItemsSource="{Binding YoutubeItems}"
@@ -43,19 +46,19 @@
                     <GridViewColumn Header="썸네일" Width="80">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Image  Stretch="Fill" Source="{Binding Thumbnail}"/>
+                                <Image Stretch="Fill" Source="{Binding Thumbnail}" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="타이틀" Width="Auto" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Header="채널명" Width="Auto" DisplayMemberBinding="{Binding ChannelTitle}"/>
-                    <GridViewColumn Header="링크" Width="Auto" DisplayMemberBinding="{Binding URL}"/>
+                    <GridViewColumn Header="타이틀" Width="Auto" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
+                    <GridViewColumn Header="채널명" Width="Auto" DisplayMemberBinding="{Binding ChannelTitle}"></GridViewColumn>
+                    <GridViewColumn Header="링크" Width="Auto" DisplayMemberBinding="{Binding URL}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
 
-        <Grid Grid.Row="1" Grid.Column="1" Margin="10" >
-            <cefsharp:ChromiumWebBrowser Address="{Binding YoutubeUri}"/>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+            <cefsharp:ChromiumWebBrowser Address="{Binding YoutubeUri}" />
         </Grid>
     </Grid>
 </mah:MetroWindow>
