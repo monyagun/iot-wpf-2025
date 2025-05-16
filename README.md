@@ -369,4 +369,8 @@ IoT 개발자 WPF 학습리포지토리 2025
 7. 결과 화면
 
     https://github.com/user-attachments/assets/9ba64ceb-5fc2-4ec3-9330-ff8a47cda6f9
-    
+
+## 7일차
+### 부산광역시 부산맛집 정보앱
+1. [데이터포털]()
+2. WPF 프로젝트 생성  
