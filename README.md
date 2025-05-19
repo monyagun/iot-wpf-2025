@@ -402,9 +402,51 @@ IoT 개발자 WPF 학습리포지토리 2025
 https://github.com/user-attachments/assets/0100a0e3-86e1-48a2-9a35-b0254d1ac4bb
 
 
+### 스마트홈 연동 모니터링앱
+    
+<img src="./image/wpf0022.png" width="650">
+
+- 전면부
+
+<img src="./image/wpf0023.png" width="650">
+
+- 후면부
+
+- [개발링크](https://github.com/hugoMGSung/hungout-with-arduino/tree/main/SmartHomeDIY)
 
 
+1. Arduino + Rasberry Pi 스마트홈 기제작
 
+#### MQTT
+
+<img src="./image/wpf0023.png" width="600">
+
+- Message Queueing Telemetry Transport : 기계간 통신용 경량 메시징 프로토콜
+- Publish / Subscribe 라는 출판쪽 용어로 사용
+    - Publish(출간) : 메시지 만들어서 전달
+    - Subsribe(구독) : 필요한 메시지를 수신받아서 사용
+- Server(MQTT 브로커)/Client 프로그램으로 동작
+- 데이터는 휘발성 : 받는 사람이 업승면 데이터는 사라짐. DB에 저장하는 구성을 해줘야 함.
+
+- MQTT를 대체할 후 있는 유사한 기능을 하는 기술
+    - `Redis`, `Apache Kafka`, RabbitMQ, ZeroMQ, Socket통신 직접개발
+
+#### MQTT 시뮬레이션 프로젝트 시작
+1. MQTT 브로커 설치
+    - mosquitto-2.0.21a-install-windows-x64.exe 설치
+    - 설치 후 서비스에서 서비스 중지
+2. 모스키토 설정파일 수정
+    - mosquitto.conf 문서에디터
+
+### 스마트홈 프로젝트 시작
+1. 화면 UI 변경
+2. NuGet 패키지
+    - CommunityToolkit.Mvvm 설치
+3. Models, Vies, 
+4. MainWindow 바인딩 처리
+5. MainViewModel에서 바인딩 속성 초기화
+
+    <img src="./image/wpf0025.png" width="650">
 
     
     
