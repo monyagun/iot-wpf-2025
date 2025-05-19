@@ -451,6 +451,10 @@ IoT 개발자 WPF 학습리포지토리 2025
 
 
 
+https://github.com/user-attachments/assets/ef18811b-4675-4130-a303-b1e9864f8b57
+
+
+
 ### 스마트홈 프로젝트 시작
 1. 화면 UI 변경
 2. NuGet 패키지
