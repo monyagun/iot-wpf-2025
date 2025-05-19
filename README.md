@@ -390,6 +390,13 @@ IoT 개발자 WPF 학습리포지토리 2025
 
     https://github.com/user-attachments/assets/afbb89f4-659a-4d92-8565-0a78d8dde575
 
+## 8일차 (05.19)
+
+### 부산광역시 부산맛집 정보맵 (계속)
+1. 메인창내용을 구글맵창으로 이동
+2. CefSharp.Wpf로 구글맵지도 표현
+3. 위도(Latitude), 경도(Longitude) 표형
+
 
 
 
