@@ -86,7 +86,7 @@ namespace WpfSmartHomeApp.ViewModels
             HomeHumid = 43.2;
 
             DetectResult = "Detected Human!";
-            IsDetectOn = false;
+            IsDetectOn = true;
             RainResult = "Raining";
             IsRainOn = true;
             AirConResult = "Aircon On!";
