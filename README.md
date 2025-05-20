@@ -503,6 +503,10 @@ https://github.com/user-attachments/assets/ef18811b-4675-4130-a303-b1e9864f8b57
 
     
 
+https://github.com/user-attachments/assets/e9bf7a86-185e-4335-9039-36a94e50b21e
+
+
+
 
 ## 10일차
 
