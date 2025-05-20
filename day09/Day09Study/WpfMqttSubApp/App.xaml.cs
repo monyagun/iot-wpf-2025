@@ -12,7 +12,7 @@ namespace WpfMqttSubApp
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            var coordinator = DialogCoordinator.Instance; // new DialogCoordinator() 와 동일
+            var coordinator = DialogCoordinator.Instance;  // new DialogCoordinator() 와 동일
             var viewModel = new MainViewModel(coordinator);
             var view = new MainView
             {
@@ -21,5 +21,4 @@ namespace WpfMqttSubApp
             view.ShowDialog();
         }
     }
-
 }

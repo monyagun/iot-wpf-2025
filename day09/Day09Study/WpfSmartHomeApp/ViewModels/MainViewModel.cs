@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System;
+using System.Configuration;
+using System.Data;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -7,37 +10,38 @@ namespace WpfSmartHomeApp.ViewModels
 {
     public partial class MainViewModel : ObservableObject
     {
-
         private double _homeTemp;
         private double _homeHumid;
-        private string _detectResult;
+
         private bool _isDetectOn;
-        private string _rainResult;
         private bool _isRainOn;
-        private string _airConResult;
         private bool _isAirConOn;
+        private bool _isLightOn;
+        private string _detectResult;
+        private string _rainResult;
+        private string _airConResult;
         private string _lightResult;
-        private bool _isLightConOn;
         private string? _currDateTime;
-        private DispatcherTimer _timer;
+
+        private readonly DispatcherTimer _timer;
 
         public MainViewModel()
-        { 
-        CurrDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-        _isDetectOn = false;
-        _timer = new DispatcherTimer();
-        _timer.Interval = TimeSpan.FromSeconds(1);
-        _timer.Tick += (sender, e) =>
         {
             CurrDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-        };
-        _timer.Start();
+
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(1);
+            _timer.Tick += (sender, e) =>
+            {
+                CurrDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            };
+            _timer.Start();
         }
 
         public string? CurrDateTime
         {
             get => _currDateTime;
-            set => SetProperty(ref _currDateTime, value);   
+            set => SetProperty(ref _currDateTime, value);
         }
 
         // 온도 속성
@@ -68,15 +72,30 @@ namespace WpfSmartHomeApp.ViewModels
             set => SetProperty(ref _isDetectOn, value);
         }
 
-        public string RainResult
-        {
-            get => _rainResult;
-            set => SetProperty(ref _rainResult, value);
-        }
+        // IsAirConOn, IsLightOn
         public bool IsRainOn
         {
             get => _isRainOn;
             set => SetProperty(ref _isRainOn, value);
+        }
+
+        public bool IsAirConOn
+        {
+            get => _isAirConOn;
+            set => SetProperty(ref _isAirConOn, value);
+        }
+
+        public bool IsLightOn
+        {
+            get => _isLightOn;
+            set => SetProperty(ref _isLightOn, value);
+        }
+
+        // AirConResult, LightResult
+        public string RainResult
+        {
+            get => _rainResult;
+            set => SetProperty(ref _rainResult, value);
         }
 
         public string AirConResult
@@ -84,21 +103,11 @@ namespace WpfSmartHomeApp.ViewModels
             get => _airConResult;
             set => SetProperty(ref _airConResult, value);
         }
-        public bool IsAirConOn
-        {
-            get => _isAirConOn;
-            set => SetProperty(ref _isAirConOn, value);
-        }
 
         public string LightResult
         {
             get => _lightResult;
             set => SetProperty(ref _lightResult, value);
-        }
-        public bool IsLightOn
-        {
-            get => _isLightConOn;
-            set => SetProperty(ref _isLightConOn, value);
         }
 
         // LoadedCommand 에서 앞에 On이 붙고 Command는 삭제
@@ -114,9 +123,8 @@ namespace WpfSmartHomeApp.ViewModels
             IsRainOn = true;
             AirConResult = "Aircon On!";
             IsAirConOn = true;
-            LightResult = "Light On!";
-            IsLightOn = true;   
-
+            LightResult = "Light On~";
+            IsLightOn = true;
         }
     }
 }

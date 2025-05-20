@@ -112,32 +112,33 @@
                                        TextWrapping="Wrap"
                                        Foreground="White" />
 
-                            <TextBlock FontSize="30" FontWeight="SemiBold"
+                            <TextBlock FontSize="25" FontWeight="SemiBold"
                                        Foreground="Azure"
-                                       Text="{Binding CurrDateTime}"
-                                       />
+                                       Text="{Binding CurrDateTime}" />
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontSize="32" Foreground="White" Margin="0,0,30,0">
-                                    <Run Text="{Binding HomeTemp, StringFormat=F1}" FontWeight="Bold" Foreground="#EFCA32" /><Run Text="℃" FontWeight="Thin" FontSize="26" />
+                                    <Run Text="{Binding HomeTemp, StringFormat=F1}" FontWeight="Bold" Foreground="#EFCA32" />
+                                    <Run Text="℃" FontWeight="Thin" FontSize="26" />
                                 </TextBlock>
                                 <TextBlock FontSize="26" Text="/" Foreground="White" Margin="0,0,20,0" />
                                 <TextBlock FontSize="32" Foreground="White">
-                                    <Run Text="{Binding HomeHumid, StringFormat=F1}" FontWeight="SemiBold" Foreground="#7488DF" /><Run Text=" %" FontWeight="Thin" FontSize="26" />
+                                    <Run Text="{Binding HomeHumid, StringFormat=F1}" FontWeight="SemiBold" Foreground="#7488DF" />
+                                    <Run Text=" %" FontWeight="Thin" FontSize="26" />
                                 </TextBlock>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Temperature"
-                                   Foreground="White"
-                                   FontSize="12"
-                                   Margin="0,0,55,0" />
+                                    Foreground="White"
+                                    FontSize="12"
+                                    Margin="0,0,55,0" />
                                 <TextBlock Text="Humidity"
-                                   Foreground="White"
-                                   FontSize="12"
-                                   Margin="0,0,45,0" />
+                                    Foreground="White"
+                                    FontSize="12"
+                                    Margin="0,0,45,0" />           
                             </StackPanel>
-
+                            
                         </StackPanel>
                         
                         <!-- Panels -->
@@ -162,8 +163,7 @@
                                          Title="{Binding DetectResult}"
                                          ImageOff="/Images/detect_off.png"
                                          ImageOn="/Images/detect_on.png"
-                                         IsChecked="{Binding IsDetectOn}"/>
-                                
+                                         IsChecked="{Binding IsDetectOn}"/>                                
                                 <!-- Rain Detection -->
                                 <uc:Card Grid.Column="1"
                                          Grid.Row="0"
@@ -172,7 +172,6 @@
                                          ImageOff="/Images/rain_off.png"
                                          ImageOn="/Images/rain_on.png"
                                          IsChecked="{Binding IsRainOn}"/>
-                                
                                 <!-- AirConditioner -->
                                 <uc:Card Grid.Column="0"
                                          Grid.Row="1"
@@ -181,7 +180,7 @@
                                          ImageOff="/Images/conditioner_off.png"
                                          ImageOn="/Images/conditioner_on.png"
                                          IsChecked="{Binding IsAirConOn}" />
-
+                                <!-- Lights -->
                                 <uc:Card Grid.Column="1"
                                          Grid.Row="1"
                                          Margin="0,0,8,8"

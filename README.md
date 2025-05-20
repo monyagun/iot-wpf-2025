@@ -469,13 +469,13 @@ https://github.com/user-attachments/assets/ef18811b-4675-4130-a303-b1e9864f8b57
 ## 9일차 
 
 ### 스마트홈 연동 모니터링앱 (계속)
-- MQTT부터 시작
+- MQTT 부터 시작
 
 #### 네트워크 확인
-- telnet 명령어로 서버서비스가 동작중인지 확인
+- telnet 명령어로 서버서비스가 동작중인지 확인 
 - telnet 아이피주소 포트번호
 
-    ```shell
+    ```shell    
     # MySQL에 접속가능한지 여부
     > telnet 127.0.0.1 3306
     # MQTT에 접속가능한지 여부
@@ -483,8 +483,32 @@ https://github.com/user-attachments/assets/ef18811b-4675-4130-a303-b1e9864f8b57
     ```
 
 #### MQTT 시뮬레이션 (계속)
-1. MQTTPub.py 소스코드에 Fake IOT 센서값을 전달 코딩
-2. Fake 센싱값을 json으로 publish
-3. C# MahApps.Metro 사용 MQTT 데이터 Subscriber 앱
+1. MqttPub.py 소스코드에 Fake IoT 센서값 전달 코딩
+2. Fake 센싱값을 json으로 Publish
+3. C# MahApps.Metro 사용 MQTT 데이터 Subscriber앱 
+    - CommunityToolkit.Mvvm
+    - MahApps.Metro
+    - MahApps.Metro.IconPacks
+    - Newtonsoft.Json
+    - MQTTnet
+    - MySql.Data
+
+4. DB서버에 접속자 정보확인 쿼리
+    ```sql
+    SELECT * FROM information_schema.processlist LIMIT 10; -- 데이터가 10건 이상이면 LIMIT 10은 삭제
+    ```
+
+5. WPF MVVM 전체구현
+6. MqttPub.py와 Publish된 IoT데이터 WPF에서 Subscribe 예제
+
     
+
+
+## 10일차
+
+### 스마트홈 연동 모니터링앱 (계속)
+
+#### 스마트홈 기기 실제 IoT센서데이터 모니터링앱
+
+#### 스마트홈 WPF 실시간 시각화
     
