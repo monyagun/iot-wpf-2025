@@ -535,11 +535,17 @@ https://github.com/user-attachments/assets/e9bf7a86-185e-4335-9039-36a94e50b21e
 - MQTT 센서 데이터로 동작용 변수 값 할당
 - 실행화면
 
-    <>
+    
+
+    https://github.com/user-attachments/assets/2181f209-621f-4716-9df2-f9ae2299de05
+
 
     스마트홈 조작영상
 
-    <>
+
+
+    https://github.com/user-attachments/assets/b882246d-27d3-4d19-a215-e7e1e89346ef
+
 
     스마트홈 모니터링앱 동작영상
     
